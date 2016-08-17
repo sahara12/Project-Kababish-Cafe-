@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Anaheim);
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+    box-sizing: border-box;
+}
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+html,
+body{
+  min-height: 100%;
+}
+body{
+  /*background-image: radial-gradient(mintcream 0%, lightgray 100%);*/
+}
+h1{
+  display: table;
+  margin: 5% auto 0;
+  text-transform: uppercase;
+  font-family: 'Anaheim', sans-serif;
+  font-size: 4em;
+  font-weight: 400;
+  text-shadow: 0 1px white, 0 2px black;
+}
+
+h2{
+  display: table;
+  margin: 4% auto 0;
+  text-transform: uppercase;
+  font-family: 'Anaheim', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  text-shadow: 0 1px white, 0 2px black;
+
+}
+p{
+  font-size: 18px;
+}
+a:link{
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color:black;
+    text-shadow: 0 1px white, 0 2px black;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+.container{
+  margin: 4% auto;
+  width: 210px;
+  height: 140px;
+  position: relative;
+  perspective: 1000px;
+}
+#carousel{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+  animation-play-state: paused;
+}
+#carousel figure{
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 50%px;
+  left: 10px;
+  top: 10px;
+  background: black;
+  overflow: hidden;
+  border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+  -webkit-filter: grayscale(1);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+img:hover{
+  -webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+.modal-header{
+  background-color: rgba(0,0,0,.2);
+  color: black;
+}
+.modal-footer{
+  background-color: rgba(0,0,0,.2);
+  color: black;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+</style>
+
+<body>
+<h1>Menu</h1>
+  <div class="container">
+      <div id="carousel">
+      <figure><img src="kk/12.jpg" alt=""></figure>
+      <figure><img src="kk/11.jpg" alt=""></figure>
+      <figure><img src="kk/13.jpg" alt=""></figure>
+      <figure><img src="kk/14.jpg" alt=""></figure>
+      <figure><img src="kk/15.jpg" alt=""></figure>
+      <figure><img src="kk/16.jpg" alt=""></figure>
+      <figure><img src="kk/17.jpg" alt=""></figure>
+      <figure><img src="kk/18.jpg" alt=""></figure>
+      <figure><img src="kk/19.jpg" alt=""></figure>
+    </div>
+
+  </div> 
+  <!-- for menu list --> 
+<div class ="row">
+<div class="col-sm-4" ><h2> <a data-toggle="modal" data-target="#myModal"> Appetizers </a></h2></div>
+<div class="col-sm-4">
+<h2> <a data-toggle="modal" data-target="#bModal">Vegetarin Entree Special</a></h2> </div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#hModal">Chef Special</a></h2></div>
+</div>
+
+
+<div class ="row">
+  <div class= "col-sm-4">
+<h2> <a data-toggle="modal" data-target="#yModal"  >Salads</a></h2>
+</div> 
+<div class="col-sm-4">
+<h2> <a data-toggle="modal" data-target="#cModal">Kababish Biryani Special</a></h2></div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#jModal">Kababish Grill Special</a></h2></div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+<h2> <a data-toggle="modal" data-target="#aModal" >Burgers</a></h2> </div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#dModal">Kababish Traditional Breads</a></h2></div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#iModal">Condiments</a></h2></div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-4">
+<h2> <a data-toggle="modal" data-target="#zModal">Wraps</a></h2></div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#eModal">Non-Veg Entree Special</a></h2></div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#kModal">Smoothies</a></h2></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#nModal">Weekend Brunch</a></h2></div>
+  <div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#mModal">Desserts</a></h2></div>
+<div class="col-sm-4"><h2> <a data-toggle="modal" data-target="#lModal">Berverage</a></h2></div>
+</div>
+<!-- end menu list -->
+
+
+
+<!-- for apptizer -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Apptizers</h3>
+        </div>
+        <div class="modal-body">
+ 
+       
+    <div class="panel-group" id="accordion">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Papadam(2)&nbsp&nbsp $1.50</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/11.jpg" align="right"> </p></div>
+      Light crisp wafers made from lentil flours.
+    </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Samosa(2) &nbsp &nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="col-md-15"><img src="kk/12.jpg" align="right"> </p></div>
+        <div class="panel-body">Potato and green peas pastry.</div>
+      </div>
+    </div>
+
+
+
+    
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Hummus &nbsp &nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="col-md-15"><img src="kk/14.jpg" align="right"> </p></div>
+        <div class="panel-body">fresh combination of tahini and chick peas. Served with naan.</div>
+      </div>
+    </div>
+
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Onion pakora (2)&nbsp
+            &nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/14.jpg" align="right"> </p></div>
+      onion spiced fritters.
+    </div>
+      </div>
+    </div>
+
+
+
+     <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Chaat papdi &nbsp&nbsp $6.00</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/15.jpg" align="right"> </p></div>
+     Light crisp wafers made from lentil flours.</div>
+      </div>
+    </div>
+
+
+   
+   <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Paneer pakora &nbsp&nbsp $8.00</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/16.jpg" align="right"> </p></div>
+     Indian cheese spiced fritters.</div>
+      </div>
+    </div>
+
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Garden platter &nbsp
+            &nbsp $8.00</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"> </p></div>
+     Indian cheese spiced fritters.</div>
+      </div>
+    </div>
+
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Chicken65 &nbsp
+            &nbsp $8.00</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"> </p></div>
+     Boneless strips of fried chicken cooked with special herbs and seasoning.</div>
+      </div>
+    </div>
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Kababish Wings &nbsp
+            &nbsp $7.00</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"> </p></div>
+     Seasoned chicken wings in a hot and tangy Buffalo-style sauce.
+</div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Kababish Shrimp  &nbsp
+            &nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"> </p></div>
+     seekh kabab, shrimp, chicken tikka and lamb boti kabab .</div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Apadam basket(10) &nbsp
+            &nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"> </p></div>
+     </div>
+      </div>
+    </div>
+
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Onion, chilies & sliced lemon plate &nbsp
+            &nbsp $5.00</a>
+        </h4>
+      </div> 
+      <div id="collapse12" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"> </p></div>
+     </div>
+      </div>
+    </div>
+
+  </div>      
+   </div>
+  <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end apptizer -->
+
+
+
+
+
+<!-- for salads -->
+<div class="modal fade" id="yModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Salads</h3>
+        </div>
+        <div class="modal-body">
+
+
+
+
+ 
+    <div class="panel-group" id="accordion1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse18">Dressing &nbsp&nbsp $1.50</a> 
+        </h4>
+      </div>
+      <div id="collapse18" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      Golden Italian, Ranch, Raspberry  vinaigrette, balsamic vinaigrette and Chef Special dressing.
+    </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse19">Greek &nbsp&nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse19" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+      Greens topped with black olives, tomatoes, cucumbers, feta cheese  and prpperoncini.
+
+    </div>
+      </div>
+    </div>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse20">Strawberry salad &nbsp &nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse20" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Spring mix with strawberries, tangerines, cucumbers, tomatoes, walnuts and feta cheese.
+
+    </div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse21">Avocado Salad   salad  &nbsp&nbsp $5.00</a>
+        </h4>
+      </div>
+      <div id="collapse21" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Fresh avocado served with mix greens and peperrocini.
+
+
+    </div>
+      </div>
+    </div>
+
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse22">Kababish chicken salad   salad &nbsp&nbsp $6.00</a>
+        </h4>
+      </div>
+      <div id="collapse22" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Grilled chicken strips topped over mix greens served with mint and yogurt sauce.
+    </div>
+      </div>
+    </div>
+
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse23">Chicken apricot Salad  &nbsp&nbsp $6.00</a>
+        </h4>
+      </div>
+      <div id="collapse23" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Backed chicken breast meat with dried apricot over mix greens.</div>
+      </div>
+    </div>
+
+
+
+</div>
+</div>
+
+
+  <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--
+
+Burger
+-->
+<div class="modal fade" id="aModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Burger</h3>
+        </div>
+        <div class="modal-body">
+
+ 
+    <div class="panel-group" id="accordion2">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapse25">Kababish Burger  &nbsp &nbsp $6.00</a>
+        </h4>
+      </div>
+      <div id="collapse25" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Chicken pattie served with romaine lettuce , tomatoes and onions.
+</div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapse26">Kababish lamb burger &nbsp&nbsp $7.00</a>
+        </h4>
+      </div>
+      <div id="collapse26" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Lamb pattie served with romaine lettuce, tomatoes and onion.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <!-- for checkbox 
+        <div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+ 
+  </label>
+</div>-->
+<!-- end checkbox -->
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapse27">
+            Kababish Creamy Burger &nbsp&nbsp $8.00</a>          
+       </h4>
+      </div>
+      <div id="collapse27" class="panel-collapse collapse ">
+        <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+      Choice of chicken or lamb pattie with cream cheese, onion and avocados with mint sauce.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 
+Wraps:-->
+
+<div class="modal fade" id="zModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Wraps</h3>
+        </div>
+        <div class="modal-body">
+        <p2> &nbsp Served with naan or roti.</p2>
+        <br>
+ <div class="panel-group" id="accordion3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3" href="#collapse28">Veggie and Hummus Wraps &nbsp&nbsp $6.00</a> 
+        </h4>
+      </div>
+      <div id="collapse28" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      Hummus, tomatoes, avocado and organic mix greens.
+    </div>
+      </div>
+    </div>
+
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3" href="#collapse29">Apricot chicken Wraps &nbsp&nbsp $8.00</a> 
+        </h4>
+      </div>
+      <div id="collapse29" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      Backed chicken breast meat with bel peppers, red onions and dried apricots.
+    </div>
+      </div>
+    </div>
+
+
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3" href="#collapse30">Seekh Kabab Wrap &nbsp &nbsp $8.00</a> 
+        </h4>
+      </div>
+      <div id="collapse30" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      Seasoned tender seasoned chicken chunks wrapped in sauce.
+    </div>
+      </div>
+    </div>
+
+   
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3" href="#collapse31">Tandoori Chicken Wrap  &nbsp&nbsp $8.00</a> 
+        </h4>
+      </div>
+      <div id="collapse31" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      Boneless chicken grilled in a tandoori over served with mint and tamarind sauce.
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--
+  Vegetarian Entrée Specials-->
+<div class="modal fade" id="bModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Vegetarian Entrée Specials</h3>
+        </div>
+        <div class="modal-body">
+          <p2> &nbsp All dishes simmered in herbs and spices.Served with Basmati Rice</p2>
+        <br><br>
+ 
+    <div class="panel-group" id="accordion4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse33">Daal Fry &nbsp&nbsp $8.00</a> 
+        </h4>
+      </div>
+      <div id="collapse33" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Yellow lentils with an onion butter sauce.
+    </div>
+      </div>
+    </div>
+
+ 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse34">Chana Masala &nbsp&nbsp $8.00</a> 
+        </h4>
+      </div>
+      <div id="collapse34" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Chick peas simmered in spices and tempered.
+    </div>
+      </div>
+    </div>
+
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse35">Mixed Vegetables &nbsp&nbsp $10.00</a> 
+        </h4>
+      </div>
+      <div id="collapse35" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    An assortment of vegetables simmered in a curry sauce.
+    </div>
+      </div>
+    </div>
+
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse36">Daal makhani &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse36" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Lentils simmered in butter and cream.
+    </div>
+      </div>
+    </div>
+
+   
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse37">Lahori Bhindi   &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse37" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Tender okra cooked with fresh tomatoes, onions and chilies.
+    </div>
+      </div>
+    </div>
+
+ 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse38">Bagar-e-Baigan  &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse38" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Eggplants deep fried with sesame and black seeds.
+    </div>
+      </div>
+    </div>
+
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse39">Karahi Paneer   &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse39" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Paneer with fresh tomatoes, ginger and chilies.
+    </div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse40">Saag paneer     &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse40" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Chopped spinach and Indian cheese.
+    </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse41">Shahi paner &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse41" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Pieces of Indian cheese in thick creamy spiced gravy.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapse42">Malai kofta  &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse42" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Fresh vegetable ground together with cheese formed into balls in a butter masala sauce.
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Kababish Biryani Specials : -->
+
+
+<div class="modal fade" id="cModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Kababish Biryani Specials</h3>
+        </div>
+        <div class="modal-body">
+        <p2> </p2>
+        
+ <div class="panel-group" id="accordion5">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion5" href="#collapse43">Low flame cooked basmati rice, flavored with authentic spices in thick gravy to perfections.</a> 
+        </h4>
+      </div>
+      <div id="collapse43" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"> <img src="kk/18.jpg" align="right"></p></div>
+      <br><br>
+      <br><br><br><br>
+<ul class="list-group">
+          <li class="list-group-item">Plain Basmati Rice &nbsp $9.00</li>
+          <li class="list-group-item">Egg &nbsp $14.00</li>
+          <li class="list-group-item">Goat &nbsp   $14.00</li>
+          <li class="list-group-item">Vegetable &nbsp   $9.00</li>
+          <li class="list-group-item">Chicken &nbsp   $13.00</li>
+          <li class="list-group-item">Lamb &nbsp    $14.00</li>
+          <li class="list-group-item">Fish &nbsp     $14.000</li>
+        </ul>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Kababish Traditional  Breads -->
+
+ <div class="modal fade" id="dModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Non-veg Entrée Specials</h3>
+        </div>
+        <div class="modal-body">
+          <p2> &nbsp Flavored gravy seasoned with traditional herbs and spices, made to order as saucy or dry. Served with plain Basmati Rice.</p2>
+        <br><br>
+ 
+    <div class="panel-group" id="accordion6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion6" href="#collapse44">Plain Naan  &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse44" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Leavened plain bread baked.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion6" href="#collapse45">Tandoori Roti  &nbsp&nbsp $3.00</a> 
+        </h4>
+      </div>
+      <div id="collapse45" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Baked flat wheat bread.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion6" href="#collapse46">Garlic Naan    &nbsp&nbsp $3.00</a> 
+        </h4>
+      </div>
+      <div id="collapse46" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Bread glazed with green and cilantro.
+    </div>
+      </div>
+    </div>
+
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion6" href="#collapse47">Bullet Naan    &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse47" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Bread stuffed with seasoned spices and herbs with chunks of chicken.
+    </div>
+      </div>
+    </div>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion6" href="#collapse48">Kababish Qeema Naan &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse48" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Bread stuffed with spices and ground chicken.
+    </div>
+      </div>
+    </div>
+
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion6" href="#collapse49">Kababish Naan basket &nbsp&nbsp $10.00</a> 
+        </h4>
+      </div>
+      <div id="collapse49" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Plain Naan, Garlic Naan, Chicken Tikka Naan and kababish Qeema Naan.
+    </div>
+      </div>
+    </div>
+     </div>
+    </div>
+ 
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Non- veg  Entrée Specials: -->
+<div class="modal fade" id="eModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Non-veg Entrée Specials</h3>
+        </div>
+        <div class="modal-body">
+          <p2> Flavored gravy seasoned with traditional herbs and spices, made to order as saucy or dry. Served with plain Basmati Rice. </p2>
+          <p2> Choice of meat:&nbsp Chicken &nbsp$13.00, Goat&nbsp $15.00, Lamb&nbsp $15.00, Shrimp&nbsp $14.00, Fish &nbsp $14.00</p2>
+        <br><br>
+
+        <div class="panel-group" id="accordion7">
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion7" href="#collapse50">Korma </a> 
+        </h4>
+      </div>
+      <div id="collapse50" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Mildly spiced choice of meat flavored in alight creamy sauce.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse51">Butter Chicken</a>
+          </h4>
+        </div>
+        <div id="collapse51" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>    
+    Mildly spiced choice of meat flavored in alight creamy sauce.
+    </div>
+      </div>
+    </div>
+    
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse55">Chicken Tikka Masala</a>
+          </h4>
+        </div>
+        <div id="collapse55" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+        Tandoori grilled chicken in creamy tomato gravy sautéed with spiced onions and bell peppers.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+             <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse52">Saag</a>
+          </h4>
+        </div>
+        <div id="collapse52" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+        Classic dish made with choice of meat and spinach.
+    </div>
+      </div>
+    </div> 
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse53">Chili Chicken</a>
+          </h4>
+        </div>
+        <div id="collapse53" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+        Batter fried chicken sautéed with chilies, onions and garlic to the perfection.
+    </div>
+      </div>
+    </div> 
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse56">Karahi</a>
+          </h4>
+        </div>
+        <div id="collapse56" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+        Cooked in an Indian wok with fresh tomatoes, ginger , chilies and coarsely ground spices.
+ 
+    </div>
+      </div>
+    </div> 
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse57">Dum kheema</a>
+          </h4>
+        </div>
+        <div id="collapse57" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+        Charcoal grilled ground chicken or lamb.
+ 
+    </div>
+      </div>
+    </div> 
+
+    <div class="panel panel-default">
+         <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion7" href="#collapse58">Vindaloo</a>
+          </h4>
+        </div>
+        <div id="collapse58" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+        Goat or Lamb with potatoes in a hot and tangy curry sauce.
+ 
+    </div>
+      </div>
+    </div> 
+  </div>
+</div>
+ 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<!-- for Chef Specials -->
+
+
+<div class="modal fade" id="hModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Chef Specials</h3>
+        </div>
+        <div class="modal-body">
+          <p2> Pakistani cuisine garnished with fried onions, fresh ginger, mint chopped green chilies, sliced lemon , cilantro and coriander leaves. Cooked on a low flame.
+            Served with plain Naan. </p2>
+          
+        <br><br>
+
+        <div class="panel-group" id="accordion8">
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion8" href="#collapse59">Haleem &nbsp &nbsp $14.00</a> 
+        </h4>
+      </div>
+      <div id="collapse59" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Delicious stew composed of chicken, lentils and pounded wheat made into a thick paste.
+    </div>
+      </div>
+    </div>
+
+     <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion8" href="#collapse60">Nihari &nbsp &nbsp $15.00</a> 
+        </h4>
+      </div>
+      <div id="collapse60" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+    Fiery spicy with boneless lamb stew.
+    </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    <div class="modal-footer" >
+      <button  type="button" class=" btn btn-default" data-dismiss="modal">close</button>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Condiments: -->
+
+<div class="modal fade" id="iModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Condiments</h3>
+        </div>
+        <div class="modal-body">
+          <div class="panel-group" id="accordion9">
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion9" href="#collapse61">Served with 4oz bowl. </a> 
+        </h4>
+      </div>
+      <div id="collapse61" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      
+<ul class="list-group">
+          <li class="list-group-item">PMint Chutney    &nbsp $3.00</li>
+          <li class="list-group-item">Tamarind Chutney &nbsp $3.00</li>
+          <li class="list-group-item">Yogurt Raita &nbsp   $3.00</li>
+          <li class="list-group-item">Taziki Sauce &nbsp   $3.00</li>
+          <li class="list-group-item">Mango Chutney &nbsp   $3.00</li>
+          <li class="list-group-item">Mixed Pickles  &nbsp    $3.00</li>
+          
+        </ul>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Kababish Grill special -->
+
+
+<div class="modal fade" id="jModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Kababish Grill special</h3>
+        </div>
+        <div class="modal-body">
+          <p2> &nbsp Tandoor oven specials grilled to maximize the luscious flavors.Served on a bed of grilled onions and sautéed bell peppers. Served with basmati rice.</p2>
+        <br><br>
+ 
+    <div class="panel-group" id="accordion10">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse62">Veggie Kabab (2 skewers)    &nbsp&nbsp $9.00</a> 
+        </h4>
+      </div>
+      <div id="collapse62" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+          Charbroiled seasoned tomatoes, potatoes, onions, broccoli , cauliflower, carrots and bell peppers.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse63">Haryali Peneer Tikka (2 skewers)  &nbsp&nbsp $12.00</a> 
+        </h4>
+      </div>
+      <div id="collapse63" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Grilled chunk of Indian cheese, onions bell peppers marinated in spices.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse64">Chicken seekh Kabab (2 skewers) &nbsp&nbsp $11.00</a> 
+        </h4>
+      </div>
+      <div id="collapse64" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+  Charbroiled seasoned chicken ground meat.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse65">Lamb Seekh Kabab (2 skewers) &nbsp&nbsp $13.00</a> 
+        </h4>
+      </div>
+      <div id="collapse65" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Charbroiled seasoned lamb ground meat.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse66">Chicken Tikka &nbsp&nbsp $13.00</a> 
+        </h4>
+      </div>
+      <div id="collapse66" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Tender boneless chicken marinated in yogurt sauce.
+    </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse67">Malai Chicken Tikka 
+           &nbsp&nbsp $13.00</a> 
+        </h4>
+      </div>
+      <div id="collapse67" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Tender boneless chicken in creamy yogurt sauce.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse68">Chicken Bihari Kabab  &nbsp&nbsp $14.00</a> 
+        </h4>
+      </div>
+      <div id="collapse68" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Authentic tender boneless chicken marinated in yogurt and spices.
+            Whole chicken tandoori        Half    $10.00     Full     $16.00.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse69">Lamb Boti Kabab  &nbsp&nbsp $14.00</a> 
+        </h4>
+      </div>
+      <div id="collapse69" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Grilled boneless pieces of lamb marinated in yogurt and spices.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse70">Tandoori Shrimps (12 pc) &nbsp&nbsp $15.00</a> 
+        </h4>
+      </div>
+      <div id="collapse70" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Jumbo shrimps marinated in garlic, yogurt and fresh coriander.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse71">Tandoori Fish &nbsp&nbsp $15.00</a> 
+        </h4>
+      </div>
+      <div id="collapse71" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>Tender fish marinated in yogurt.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse72">TTandoori Fish  Tikka  &nbsp&nbsp $15.00</a> 
+        </h4>
+      </div>
+      <div id="collapse72" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Cubes  of salmon  marinated in yogurt.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse73">Kababish Tandoori Platter &nbsp&nbsp $22.00</a> 
+        </h4>
+      </div>
+      <div id="collapse73" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            A savory combination of sizzling chicken Bihari kabab, malai Chicken tikka, chicken tikka, chicken and lamb kabab.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse74"> Kababish seafood platter &nbsp&nbsp $22.00</a> 
+        </h4>
+      </div>
+      <div id="collapse74" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            A savory combination of sizzling fish tikka, tandoori fish, tandoori shrimp, and lahori  fish.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion10" href="#collapse75"> Kabaish lamb Chops &nbsp&nbsp $22.00</a> 
+        </h4>
+      </div>
+      <div id="collapse75" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+            Grilled tender lamb chops marinated in yogurt and spices.
+    </div>
+      </div>
+    </div>
+     </div>
+      </div>
+    
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Smoothies -->
+<div class="modal fade" id="kModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Smoothies</h3>
+        </div>
+        <div class="modal-body">
+          <p2></p2>
+        
+ 
+    <div class="panel-group" id="accordion11">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion11" href="#collapse76">Mango lassi  
+              &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse76" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion11" href="#collapse77">Yogurt Lassi- sweet or salty    &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse77" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+  
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion11" href="#collapse78">Mango and pineapple Smoothie    &nbsp&nbsp $5.00</a> 
+        </h4>
+      </div>
+      <div id="collapse78" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+  
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion11" href="#collapse79">Super Berry Smoothie    &nbsp&nbsp $5.00</a> 
+        </h4>
+      </div>
+      <div id="collapse79" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+      
+  
+    </div>
+      </div>
+    </div>
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion11" href="#collapse80">Seasonal smoothie 
+             &nbsp&nbsp $5.00</a> 
+        </h4>
+      </div>
+      <div id="collapse80" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></p></div>
+  
+    </div>
+      </div>
+    </div>
+    </div>
+      </div>
+    
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Beberages -->
+
+<div class="modal fade" id="lModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Beberages</h3>
+        </div>
+        <div class="modal-body">
+          <p2></p2>
+        
+ 
+    <div class="panel-group" id="accordion12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse81">Fresh squeezed orange juice &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse81" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse82">Fresh squeezed Lemonada &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse82" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse83">Ice Tea-sweet and unsweetened  &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse83" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          
+
+    </div>
+      </div>
+    </div>
+
+       <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse84">Coke Prodect  &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse84" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Coke, Sprite, Coke Zero, Dr.Pepper, Fanta, Pepsi, Diet Pepsi, Mt Dew   
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse85">Limca, ThumbsUp, Masala soda  &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse85" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+           
+
+    </div>
+      </div>
+    </div>
+
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse86">Water Bottle   &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse86" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+        
+    </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion12" href="#collapse87">Hot  &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse87" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          <p>Indian Chai – hot tea     $2.00 </p>
+          <p>Coffee   $2.00 </p>    
+
+    </div>
+      </div>
+    </div>
+
+    </div>
+      </div>
+    
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Desserts -->
+<div class="modal fade" id="mModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Desserts</h3>
+        </div>
+        <div class="modal-body">
+          <p2></p2>
+        
+ 
+    <div class="panel-group" id="accordion13">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion13" href="#collapse90">Gulab jamun (2 pc) &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse90" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          A cheese dessert served with sweet syru and topped with almonds and pistachios
+
+    </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion13" href="#collapse91">Ras Malaai (2 pc) &nbsp&nbsp $4.00</a> 
+        </h4>
+      </div>
+      <div id="collapse91" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Made with homemade cheese mixed with cardamom, topped with pistachios
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion13" href="#collapse92">Kheer &nbsp&nbsp $5.00</a> 
+        </h4>
+      </div>
+      <div id="collapse92" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Made from rice and cream (rice pudding)
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion13" href="#collapse93">Gaajar halwa  &nbsp&nbsp $5.00</a> 
+        </h4>
+      </div>
+      <div id="collapse93" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Sweet Indian dessert made with carrots and milk, topped with  almonds
+
+    </div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion13" href="#collapse94">Cake Slice  &nbsp&nbsp $6.00</a> 
+        </h4>
+      </div>
+      <div id="collapse94" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          
+
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion13" href="#collapse95">Falooda $5.00  &nbsp&nbsp $5.00</a> 
+        </h4>
+      </div>
+      <div id="collapse95" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Traditional Pakistani dessert with a scoop of ice cream topped with vermicelli, basil seeds, rose syrup and nuts.
+
+    </div>
+      </div>
+    </div>
+</div>
+      </div>
+    
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  Weekend brunch  -->
+
+<div class="modal fade" id="nModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Weekend Brunch Special </h3>
+        </div>
+        <div class="modal-body">
+          <p2></p2>
+        
+ 
+    <div class="panel-group" id="accordion15">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse96">Vegetarian &nbsp&nbsp $13.00</a> 
+        </h4>
+      </div>
+      <div id="collapse96" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Served with salad, vegetable biryani and naan/puri, chana tarkari and daily speacial and sooji halwa.
+
+    </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse97">Non-vegetarian &nbsp&nbsp $13.00</a> 
+        </h4>
+      </div>
+      <div id="collapse97" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Served with salad,chicken biryani ana naan/puri, qeema  aalu and chana tarkari and sooji halwa.
+    </div>
+      </div>
+    </div>
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse98">Combo Kabab &nbsp&nbsp $16.00</a> 
+        </h4>
+      </div>
+      <div id="collapse98" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          served with salad, chicken biryani and naan/puri, choice of two types of chicken kababs and chana takari and sooji halwa
+    </div>
+      </div>
+    </div>
+    
+   <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse99">Kababish masala omelette   &nbsp&nbsp $10.00</a> 
+        </h4>
+      </div>
+      <div id="collapse99" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          mixture of onions, tomatoes and bell peppers with herbs and spices in an egg omelette.
+          served with plain parata/puri/naan.
+    </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse110">parata   &nbsp&nbsp $3.00</a> 
+        </h4>
+      </div>
+      <div id="collapse110" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Plain Parata , Aalu Parata, Gobi Parata, Qeema Parata.
+    </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse100">Puri    &nbsp&nbsp $2.00</a> 
+        </h4>
+      </div>
+      <div id="collapse100" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Fluffy bread
+    </div>
+      </div>
+    </div> 
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse101">Chicken Qeema Aalu   &nbsp&nbsp $13.00</a> 
+        </h4>
+      </div>
+      <div id="collapse101" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          served with plain basmati rice
+    </div>
+      </div>
+    </div> 
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse102">Nihari  &nbsp&nbsp $15.00</a> 
+        </h4>
+      </div>
+      <div id="collapse102" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Fiery spicy with boneless lamb stew. Served with naan/Parata.
+    </div>
+      </div>
+    </div> 
+
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse111">Kunna  &nbsp&nbsp $22.00</a> 
+        </h4>
+      </div>
+      <div id="collapse111" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"><img src="kk/18.jpg" align="right"></div>
+          Tender whole lamb shank with herbs and spices. Served with naan.
+    </div>
+      </div>
+    </div> 
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse103">Berverage </a> 
+        </h4>
+      </div>
+      <div id="collapse103" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      
+<ul class="list-group">
+          <li class="list-group-item">Fresh  squeezed orange juice    &nbsp $4.00</li>
+          <li class="list-group-item">Fresh  squeezed Lemonada &nbsp $4.00</li>
+          <li class="list-group-item">Ice Tea- sweet and unsweetened &nbsp   $2.00</li>
+          <li class="list-group-item">Coke , Sprite, Coke Zero, Dr. Pepper, Fanta, Pepsi, Diet Pepsi , Mt Dew &nbsp   $2.00</li>
+          <li class="list-group-item">Limca, ThumbsUp, Masala soda &nbsp   $3.00</li>
+          <li class="list-group-item">Indian Chai – hot tea    &nbsp    $3.00</li>
+          <li class="list-group-item">Coffee    &nbsp    $2.00</li>
+          <li class="list-group-item">Water   &nbsp    $2.00</li>
+                  </ul>
+      </div>
+    </div>
+        </div>
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion15" href="#collapse104">Add Side Order </a> 
+        </h4>
+      </div>
+      <div id="collapse104" class="panel-collapse collapse ">
+         <div class="panel-body"><div class="col-md-15"></div>
+      
+
+        <ul class="list-group">
+          <li class="list-group-item">Naan/puri     &nbsp $1.00</li>
+          <li class="list-group-item">Chicken Biryani  &nbsp $4.00</li>
+          
+          <li class="list-group-item">Kabab(1 skewer) &nbsp   $3.00</li>
+          <li class="list-group-item">Note: If customer wants to order an extra side order, only one side order per customer is permitted during at Kababish Cafe. Restaurent.com coupons and other coupons/discount deals are invaild for Weekend Brunch Special. 18% gratuity is added to parties of four and more.</li>
+          
+          
+        </ul>
+      </div>
+    </div>
+        </div>
+        </div>
+      </div>
+    
+
+    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- add more order  -->
+
+
+        
+ 
+    
+
+
+</body>
+
+  </html>
